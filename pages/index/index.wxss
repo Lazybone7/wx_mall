@@ -1,0 +1,156 @@
+.scrollPage{
+  height: 100vh;
+  padding-bottom: 120rpx;
+}
+.user-detail{
+  flex-direction: row;
+  align-items: flex-end;
+}
+image{
+  border-radius: 25rpx;
+}
+.product-class{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.product-display{
+  column-count: 2;
+  display: -webkit-flex;
+  flex-direction: column;
+  margin: 10rpx;
+  background-color: white;
+  width: 335rpx;
+  border-radius: 25rpx;
+  overflow: hidden;
+}
+.cate-tag{
+  background-color: var(--ghostWhite);
+  color:black !important;
+  font-size: 30rpx !important;
+}
+.spiker{
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  height: 280rpx;
+  margin-top: 10rpx;
+}
+.product-item:first-child{
+  margin-left: 15rpx;
+}
+.product-item{
+    width: 150rpx;
+    background-color: white;
+    height: 280rpx;
+    margin-right: 15rpx;
+}
+.product-item:last-child{
+  background-color: red;
+}
+.tag{
+  color:red;
+}
+.mall-spiker .item{
+  display: inline-block;
+  width: 22px;
+  margin-right: 5px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  background-color: red;
+  border-radius: 2px;
+}
+.mall-spiker{
+  width: 100%;
+  height: 400rpx;
+}
+.mall-spiker image{
+  width: 200rpx;
+}
+.nav-name{
+    width: 100%;
+    font-size: 28rpx;
+    text-transform: Capitalize;
+    margin-top: 20rpx;
+    position: relative;
+}
+.nav-name::before{
+    content: "";
+    display: block;
+    width: 40rpx;
+    height: 1rpx;
+    background: #000;
+    bottom: 0;
+    opacity: 0.5;
+}
+.nav-name::after {
+  content: "";
+  width: 40rpx;
+  height: 1rpx;
+  background: #000;
+  bottom: 0;
+  opacity: 0.5;
+}
+
+.mall-cate{
+  height: 480rpx;
+}
+.scroll-cate{
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.cate-item{
+  flex-direction: column;
+  width: fit-content ;
+  text-align: center;
+}
+.pageTitle{
+  padding-top: 100rpx;
+  height: 35vh;
+}
+.search{
+
+}
+.title{
+  font-size: 50rpx;
+  letter-spacing: 20rpx;
+}
+.message{
+  font-size: 60rpx !important;
+  align-items: center;
+  margin-right: 15rpx;
+}
+.mall_tag .van-col {
+  color: white;
+  font-size: 28rpx;
+}
+.mall_tag .van-col .scroll {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  height: 40rpx;
+}
+.mall_tag .van-col .scroll .item {
+  display: flex;
+  margin-right: 15rpx;
+  color: white;
+  font-size: 28rpx;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 30rpx;
+  align-items: center;
+  padding: 0 15rpx;
+}
+.my-swiper{
+  height: 260rpx !important;
+}
+.my-swiper-item{
+  width: 100% !important;
+  height: 220rpx !important;
+}
+.my-grid{
+  margin-top: 140rpx;
+}

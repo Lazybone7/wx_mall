@@ -1,0 +1,4 @@
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+@import "/styles/my.wxss";
+@import '/miniprogram_npm/@vant/weapp/common/index.wxss';

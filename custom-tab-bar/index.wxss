@@ -1,0 +1,33 @@
+@import "../colorui/main.wxss";
+@import "../colorui/icon.wxss";
+@import "/styles/my.wxss";
+.active{
+    color: #0081ff;
+  }
+  .default{
+    color:rgb(51, 24, 24);
+  }
+  .wrapper {
+    display: flex;
+    height: 100%;
+  }
+  
+  .block {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+  }
+  .my-button{
+    transform: rotate(45deg);
+    background-color:black !important;
+  }
+  .release_camera{
+    width: 100rpx;
+    position: absolute;
+    top: 80%;
+    left:25%;
+    color: white
+  }
+  .my-bar{
+    background-color: white;
+  }
