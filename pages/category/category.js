@@ -5,14 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    activeKey: 0,
+    item:0,
   },
   onShow: function() {
     
   },
+  onChange(e){
+    let item = e.detail;
+    this.setData({
+      item
+    })
+  },
   tabBar(){
     if(typeof this.getTabBar === 'function' && this.getTabBar()){
-      console.log(123)
       this.getTabBar().setData({
         selected:1
       })

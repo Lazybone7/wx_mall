@@ -1,1 +1,26 @@
-<view>分类</view>
+<swiper class="screen-swiper round-dot" duration="500" interval="5000">
+<swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+  <image mode="aspectFill" src="https://image.weilanwl.com/img/4x3-1.jpg"></image>
+</swiper-item>
+</swiper>
+<veiw class="VerticalBox">
+  <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+    <scroll-view class="slider_bar" scroll-y style="height:calc(100vh - 375rpx)">
+      <van-sidebar-item title="标签名 1" />
+        <van-sidebar-item title="标签名 2" />
+        <van-sidebar-item title="标签名 3" />
+        <van-sidebar-item title="标签名 3" />
+        <van-sidebar-item title="标签名 3" />
+        <van-sidebar-item title="标签名 3" />
+        <van-sidebar-item title="标签名 3" />
+        <van-sidebar-item title="标签名 3" />
+        <van-sidebar-item title="标签名 3" />
+        <van-sidebar-item title="标签名 3" />
+        <van-sidebar-item title="标签名 3" />
+        <van-sidebar-item title="标签名 3" />
+        <van-sidebar-item title="标签名 3" />
+    </scroll-view>
+    
+  </van-sidebar>
+  <view>{{item}}</view>
+</veiw>
