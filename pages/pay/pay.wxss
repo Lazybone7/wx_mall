@@ -1,0 +1,9 @@
+.flex-column{
+  flex-direction: column;
+}
+.product-radius{
+  border-radius: 30rpx;
+}
+.van-ellipsis{
+  width: 230rpx;
+}

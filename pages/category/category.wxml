@@ -6,21 +6,24 @@
 <veiw class="VerticalBox">
   <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
     <scroll-view class="slider_bar" scroll-y style="height:calc(100vh - 375rpx)">
-      <van-sidebar-item title="标签名 1" />
-        <van-sidebar-item title="标签名 2" />
-        <van-sidebar-item title="标签名 3" />
-        <van-sidebar-item title="标签名 3" />
-        <van-sidebar-item title="标签名 3" />
-        <van-sidebar-item title="标签名 3" />
-        <van-sidebar-item title="标签名 3" />
-        <van-sidebar-item title="标签名 3" />
-        <van-sidebar-item title="标签名 3" />
-        <van-sidebar-item title="标签名 3" />
-        <van-sidebar-item title="标签名 3" />
-        <van-sidebar-item title="标签名 3" />
-        <van-sidebar-item title="标签名 3" />
+        <van-sidebar-item wx:for="{{cateList}}" title="{{item.name}}" wx:key="catId" data-index="{{item}}"  bindtap="onClickCateChange"/>
     </scroll-view>
-    
   </van-sidebar>
-  <view>{{item}}</view>
+  <scroll-view scroll-y style="height:810rpx; " class="flex margin column">
+    <view class="" wx:for="{{secondCateList}}" wx:key="catId">
+     <span class="text-black text-bold text-xl">{{item.name}}</span> 
+     <view class="flex  wrap">
+       <view class="margin-sm flex column justify-center" wx:for="{{item.children}}" wx:for-item="val" wx:key="i" bindtap="onClickCateItem" data-id="{{val.catId}}">
+         <view class="flex justify-center">
+          <image wx:if="{{val.icon===''||val.icon===null}}" style="width:100rpx;height:100rpx" src="../../icons/error.png" mode="aspectFit"></image>
+          <image wx:else style="width:100rpx;height:100rpx" src="{{val.icon}}" mode="aspectFit"></image>
+         </view>
+         
+         <view>{{val.name}}</view>
+        </view>
+      </view>
+     
+    </view>
+  </scroll-view>
+  
 </veiw>

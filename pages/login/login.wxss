@@ -1,0 +1,40 @@
+.content{
+  margin-top: 40px;
+}
+.account{
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 90%;
+}
+.title{
+  font-weight: bold;
+  margin-right: 30px;    
+}
+.hr{
+  border: 1px solid #cccccc;
+  opacity: 0.2;
+  width: 90%;
+  margin: 0 auto;
+}
+.see{
+  position: absolute;
+  right: 40px;
+}
+.btn{
+  width: 90%;
+  margin-top: 40px;
+  color:#999999
+}
+.operator{
+  display: flex;
+  flex-direction: row;
+}
+.operator view{
+  margin: 0 auto;
+  margin-top: 40px;
+  font-size: 14px;
+  color:#333333;
+}

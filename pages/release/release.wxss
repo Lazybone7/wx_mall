@@ -1,1 +1,142 @@
-/* pages/release/release.wxss */
+page {
+  background-color: whitesmoke;
+  padding-bottom: 120rpx;
+}
+.cuIcon-location{
+  font-size: 40rpx !important;
+}
+.title{
+  background-color: white;
+  margin: 20rpx 30rpx;
+  height: 120rpx;
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+  padding-top: 20rpx;
+}
+.p_describe {
+  background-color: white;
+  height: 460rpx;
+  margin: 0 30rpx;
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+  padding-top: 20rpx;
+}
+.p_describe .description {
+  width: 100%;
+  height: 50%;
+  font-size: 30rpx;
+}
+.p_describe .container {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.p_describe .container .fb_tool {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 70%;
+  
+}
+.p_describe .container .fb_tool button {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0;
+  font-size: 60rpx;
+  color: #ccc;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+  flex-direction: column;
+}
+.p_describe .container .fb_tool button span {
+  font-size: 20rpx;
+}
+.p_describe .container .fb_tool .up_img_item {
+  margin-left: 20rpx;
+}
+.p_describe .container .address {
+  height: 45rpx;
+}
+.p_describe .container .address .nav_address {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  float: left;
+  width: auto;
+  height: 100%;
+}
+.p_describe .container .address .nav_address image {
+  height: 40rpx;
+  width: 40rpx;
+  margin: 0 10rpx;
+}
+.p_describe .container .address .nav_address input {
+  font-size: 30rpx;
+}
+.price {
+  background-color: white;
+  margin: 20rpx 30rpx 0 30rpx;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+
+}
+.item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100rpx;
+    border-bottom: 1rpx solid #ccc;
+}
+.item span{
+  margin-left: 10rpx;
+  font-family: "华文楷体";
+  font-weight: bold;
+}
+.item .indicate{
+  position:absolute;
+  right: 50rpx;
+  color: #ccc;
+}
+.btn_tool{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120rpx;
+  padding-top: 10rpx;
+
+}  
+.btn_tool .button{
+    display: flex;
+    background-color: yellow;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_hover_tool{
+  opacity: 0.9;
+  background: #f7f7f7;
+}
+
+.cate{
+  position:absolute;
+  left:40%;
+  color:#ccc
+}
+.row{
+  flex-direction: row;
+}
+.foot{
+  position: absolute;
+  bottom: 0;
+}
+.van-transition{
+
+}

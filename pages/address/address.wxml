@@ -1,0 +1,15 @@
+<cu-custom bgColor="bg-white" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">我的地址</view></cu-custom>
+<scroll-view scroll-y style="width:100%" enable-flex class="flex justify-center column">
+<view wx:for="{{memberAddress}}" class="bg-white radius margin-sm padding" style="width:95%;" data-item="{{item}}"  bindtap="onSelectAddressClick">
+  <view class="flex align-center justify-between">
+    <view class="text-xl text-black margin-right-sm">收货人：{{item.name}}</view>
+    <view class="text-xl text-black">电话：{{item.phoneNum}}</view>
+  </view>
+  <view class="text-black">{{item.province}}{{item.city}}{{item.region}}{{item.detailAddress}}</view>
+</view>
+</scroll-view>
+<view class="foot" style="width:100%">
+  <button class="cu-btn block bg-red lg" bindtap="onManageAddressClick">
+    <text class="cuIcon-settings">管理收货地址</text>
+  </button>
+</view>

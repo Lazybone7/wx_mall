@@ -1,11 +1,13 @@
 //index.js
 //获取应用实例
 import { request} from '../../utils/request.js';
+var util = require('../../utils/data.js');
 const app = getApp()
 Page({
   data: {
     active: 0,
     swiperList:[],
+    productList:[],
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
     userInfo: {},
@@ -13,6 +15,22 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     time: 30 * 60 * 60 * 1000,
     timeData: {},
+  },
+  //获取全部商品
+  getProductList(){
+    util.getProduct('/brand/brandlist').then(resp=>{
+      console.log(resp)
+      let productList = resp.data.data
+      this.setData({
+        productList
+      })
+    })
+  },
+  onClickPro(e){
+    let brandId = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '/pages/goods/goods?brandId=' + brandId,
+    })
   },
   onChange(e) {
     this.setData({
@@ -50,6 +68,7 @@ Page({
     }
   },
   onLoad: function () {
+    this.getProductList();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

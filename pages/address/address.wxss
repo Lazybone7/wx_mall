@@ -1,0 +1,7 @@
+.foot{
+  position: absolute;
+  bottom: 0;
+}
+.column{
+  flex-direction: column;
+}

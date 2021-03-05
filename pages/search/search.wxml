@@ -1,2 +1,44 @@
-<cu-custom  isBack="{{true}}"><view slot="backText">返回</view></cu-custom>
-
+<cu-custom bgColor="bg-white" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">校园二手交易网</view></cu-custom>
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  show-action
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+/>
+<view class="text-xl margin ">
+  <view class="flex justify-between"><span>历史搜索</span><view class="cuIcon-delete"></view></view>
+  
+  <view class="grid  padding-sm">
+      <veiw class="margin-tb-sm text-center margin-lr-sm">
+        <button class="cu-btn round bg-gray ">iphonex</button>
+      </veiw> 
+      <veiw class="margin-tb-sm text-center margin-lr-sm">
+        <button class="cu-btn round bg-gray ">iphonex</button>
+      </veiw>       <veiw class="margin-tb-sm text-center margin-lr-sm">
+        <button class="cu-btn round bg-gray ">iphonex</button>
+      </veiw>       <veiw class="margin-tb-sm text-center margin-lr-sm">
+        <button class="cu-btn round bg-gray ">iphonex</button>
+      </veiw>       <veiw class="margin-tb-sm text-center margin-lr-sm">
+        <button class="cu-btn round bg-gray ">iphonex</button>
+      </veiw> 
+  </view>
+</view>
+<view class="text-xl margin ">
+  <view class="flex justify-between"><span>热门搜索</span><view class="cuIcon-refresh font-size">换一换</view></view>
+  
+  <view class="grid  padding-sm">
+      <veiw class="margin-tb-sm text-center margin-lr-sm">
+        <button class="cu-btn round bg-gray ">iphonex</button>
+      </veiw> 
+      <veiw class="margin-tb-sm text-center margin-lr-sm">
+        <button class="cu-btn round bg-gray ">iphonex</button>
+      </veiw>       <veiw class="margin-tb-sm text-center margin-lr-sm">
+        <button class="cu-btn round bg-gray ">iphonex</button>
+      </veiw>       <veiw class="margin-tb-sm text-center margin-lr-sm">
+        <button class="cu-btn round bg-gray ">iphonex</button>
+      </veiw>       <veiw class="margin-tb-sm text-center margin-lr-sm">
+        <button class="cu-btn round bg-gray ">iphonex</button>
+      </veiw> 
+  </view>
+</view>

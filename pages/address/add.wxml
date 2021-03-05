@@ -1,0 +1,40 @@
+<cu-custom bgColor="bg-white" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">新增收货地址</view></cu-custom>
+<view class="cu-list menu margin">
+  <view class="cu-item arrow">
+    <view class="content">
+     	<picker mode="region" bindchange="bindRegionChange">
+				<input
+				 disabled="{{true}}"
+				 value="{{useraddress!=[]?useraddress:''}}"
+         placeholder="请选择收货地址"
+         value="{{address}}"
+				/>
+	</picker>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <input type="text" placeholder="请输入详细地址" bindinput="bindAddressDetail"/>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <input type="text" placeholder="请输入收货人姓名" bindinput="bindName"/>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <input type="text" placeholder="请输入收货人联系电话" maxlength="11" bindinput="bindPhoneNum"/>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <input type="text" placeholder="请输入邮编" bindinput="bindPostCode"/>
+    </view>
+  </view>
+</view>
+<view class="foot" style="width:100%">
+  <button class="cu-btn block bg-green lg"  bindtap="onSaveClick">
+    <text>保存</text>
+  </button>
+</view>

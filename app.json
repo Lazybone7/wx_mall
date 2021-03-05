@@ -6,8 +6,26 @@
     "pages/user/user" ,
     "pages/release/release",
     "pages/search/search",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/goods/goods",
+    "pages/goodsList/goodsList",
+    "pages/login/login",
+    "pages/chat/chat",
+    "pages/pay/pay",
+    "pages/address/address",
+    "pages/address/manage",
+    "pages/address/add",
+    "pages/addressList/addressList",
+    "pages/release/cateList",
+    "pages/success/success",
+    "pages/test/test",
+    "pages/user/settings"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于定位当前位置信息" 
+    }
+  }, 
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -40,8 +58,11 @@
     ]
   },
   "usingComponents": {
-    "cu-custom": "/colorui/components/cu-custom"
-    
+    "cu-custom": "/colorui/components/cu-custom",
+    "van-button": "@vant/weapp/button/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-empty": "@vant/weapp/empty/index"   
   },
   "sitemapLocation": "sitemap.json"
 }

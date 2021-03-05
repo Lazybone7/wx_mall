@@ -1,1 +1,111 @@
+
 <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">发布</view></cu-custom>
+
+<view class="title">
+	<textarea
+	 class="description"
+	 placeholder="标题 品类品牌型号"
+	 placeholder-style="font-size:30rpx"
+	 maxlength="50"
+	 bindinput="bindTitle"
+	/>
+</view>
+
+<view class="bg-white flex column margin ">
+	<textarea
+	 class="description"
+	 placeholder="描述宝贝的转手原因、入手渠道和使用感受"
+	 placeholder-style="font-size:30rpx"
+     maxlength="800"
+     bindinput="bindContent"
+	/>
+
+	<view class="container">
+        <view class="cu-bar bg-white margin-top">
+		<view class="action">
+			图片上传
+		</view>
+		<view class="action">
+			{{imgList.length}}/8
+		</view>
+	    </view>
+        <view class="cu-form-group">
+            <view class="grid col-4 grid-square flex-sub">
+                <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+                    <image src='{{imgList[index]}}' mode='aspectFill'></image>
+                    <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+                        <text class="cuIcon-close"></text>
+                    </view>
+                </view>
+                <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<8}}">
+                    <text class="cuIcon-cameraadd"></text>
+                </view>
+            </view>
+        </view>
+
+        <view>
+            <picker class="flex" mode="region" bindchange="onSelectAddressClick">
+                <view class="margin flex bg-grey  align-center" style="border-radius:50rpx;">          
+                    <view class="cuIcon-location"></view>
+                    <view>{{province}} {{city}} {{district}}</view>
+                </view>
+            </picker>      
+        </view>       
+    </view>  
+</view>
+
+<view class="cu-list menu margin">
+    <view class="cu-item arrow" bindtap="showModal">
+        <view class="content flex row" >
+            <view class="cuIcon-moneybagfill margin-right-sm"></view>
+            <view> 价格 </view>
+        </view>
+        <view class="action">
+            <view class="text-price text-red">{{data.price}}</view>
+        </view>
+    </view>
+    <view class="cu-item arrow" bindtap="onSelectCate">
+        <view class="content flex row">
+            <view class="cuIcon-circlefill margin-right-sm"></view>
+            <view> 分类 </view>
+        </view>
+        <view class="action">
+            <view wx:if="{{categoryPath.length>0}}" class="text-black">{{categoryPath[0]}}/{{categoryPath[1]}}/{{categoryPath[2]}}</view>
+        </view>
+    </view>
+</view>
+
+<view class="btn_tool foot" hover-class="btn_hover_tool">
+    <view class="button" bindtap="onReleaseClick">
+        确认发布
+    </view>
+</view>
+
+<view class="cu-modal bottom-modal {{modalName===''?'':'show'}}">
+    <view class="cu-dialog">
+    <view class="cu-bar bg-white">
+      <view class="action text-green" bindtap="onConfirmPriceClick">确定</view>
+      <view class="action text-blue" bindtap="hideModal">取消</view>
+    </view>
+    <view class="padding-xl">
+      <view class="cu-list">
+          <view class="cu-item bg-white" >
+              <view class="flex  margin align-center " >
+                  <view>价格：</view>
+                  <view><input type="text" placeholder="请输入价格" bindinput="bindPrice"/></view>      
+              </view>
+              <view class="flex margin align-center">
+                  <view>入手价：</view>
+                  <view><input type="number" placeholder="请输入入手价格" bindinput="bindStartingPrice"/></view>      
+              </view>
+              <view class="flex margin align-center">
+                  <view>运费：</view>
+                  <view><input type="text" placeholder="请输入运费价格" bindinput="bindShipping"/></view>      
+              </view>
+          </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<van-dialog id="van-dialog" />

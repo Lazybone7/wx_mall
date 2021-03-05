@@ -1,0 +1,6 @@
+.border-line{
+  border-top: 1rpx solid #cccccc;
+  border-bottom: 1rpx solid #cccccc;
+  text-align: center;
+  align-items: center;
+}

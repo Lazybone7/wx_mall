@@ -1,0 +1,39 @@
+<cu-custom bgColor="bg-white" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">购买宝贝</view></cu-custom>
+<veiw class="flex justify-center flex-column">
+  <view class="margin-sm bg-white product-radius padding-sm flex align-center" style="width:95%;height:200rpx; ">
+    <view class="cu-avatar xl margin-right " style="background-image:url({{goodsObj.upLoadImgs[0]}});"></view>
+    <view class="flex flex-column justify-between" style="height:100%;width:100%;">
+      <view class="text text-bold">{{goodsObj.name}}</view>
+      <view class="text-price text-red" style="text-align:end;">{{goodsObj.price}}</view>
+    </view>
+  </view>
+  <view class="cu-list menu margin-sm bg-white product-radius flex flex-column padding-sm" style="width:95%;height:250rpx;">
+    <view class="cu-item arrow flex-sub justify-between" bindtap="onAddressClick" >
+      <view class="text-black ">收货地址</view>
+      <view >
+        <view class="flex align-center">
+          <veiw class="text-bold text-black margin-right-sm">{{address.name}}</veiw>
+          <view>{{address.phoneNum}}</view>
+        </view>
+        <view class="van-ellipsis text-black">{{address.province}}{{address.city}}{{address.region}}{{address.detailAddress}}</view>
+      </view>
+    </view>
+    <view class="cu-item flex-sub justify-between">
+      <view class="text-black ">运费</view>
+      <view class="text-red text-price" style="text-align:end;">00.00</view>
+  </view>
+  </view>
+</veiw>
+
+<view class="cu-bar bg-white tabbar border shop foot">
+  <button class="action" open-type="contact">
+      <view class="cuIcon-service text-green">
+        <view class="cu-tag badge"></view>
+      </view>
+      客服
+    </button>
+    <view class="text-xl text-bold">实付款：</view>
+    <view class="text-red text-price margin-right">{{goodsObj.price}}</view>
+    <view class="bg-orange submit">加入购物车</view>
+    <view class="bg-red submit">立即订购</view>
+  </view>

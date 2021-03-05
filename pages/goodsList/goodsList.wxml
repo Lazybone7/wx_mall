@@ -1,0 +1,20 @@
+<cu-custom bgColor="bg-white" isBack="{{true}}"><view slot="backText">返回</view><view slot="content" >
+商品
+</view></cu-custom>
+<van-tabs sticky>
+  <van-tab title="综合">
+    <view class="flex wrap" style="width:100%">
+      <view class="width height bg-white margin-ssm"></view>
+      <view class="width height bg-pink margin-ssm"></view>
+      <view class="width height bg-white margin-ssm"></view>
+      <view class="width height bg-pink margin-ssm"></view>
+      <view class="width height bg-white margin-ssm"></view>
+      <view class="width height bg-pink margin-ssm"></view>
+
+    </view>
+  </van-tab>
+  <van-tab title="信用">内容 2</van-tab>
+  <van-tab title="区域">内容 3</van-tab>
+  <van-tab title="筛选">内容 4</van-tab>
+</van-tabs>
+<view>{{cateId}}</view>

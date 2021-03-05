@@ -1,0 +1,116 @@
+page{
+
+}
+.right{
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+.van-goods-action{
+
+}
+.user-info{
+  flex-direction: column;
+}
+.user-name{
+  font-size: 40rpx;
+  color:black;
+  font-family: "楷体";
+  font-weight: 600;
+}
+.user-tag{
+  color:gray
+}
+.product-img{
+  flex-direction: column;
+}
+image{
+  width: 95%;
+  margin: 0 30rpx;
+  margin-bottom: 10rpx;
+}
+image:first-child{
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+image:last-child{
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+.radius-bottom{
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+.row{
+  flex-direction: row;
+}
+.column{
+  flex-direction: column;
+}
+input{
+  width: 400rpx !important;
+}
+.user_input{
+  border-radius: 15rpx;
+  width: 400rpx !important;
+  background-color: rgb(196, 196, 196);
+  padding:0 10rpx;
+  margin:0 30rpx;
+}
+.bar_tool {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  margin-top: 20rpx;
+}
+.bar_tool .btn_operation {
+  display: flex;
+  flex: 1;
+}
+.bar_tool .btn_operation .way {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.bar_tool .btn_operation .way span {
+  font-size: 30rpx;
+}
+.bar_tool .btn_purchase {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.bar_tool .btn_purchase button {
+  margin-left: 45%;
+  background-color: #FE3401;
+  width: 50%;
+  height: 70%;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 50rpx;
+  color: white;
+  font-size: 25rpx;
+  font-family: "幼圆";
+  font-weight: 300;
+  letter-spacing: 10rpx;
+}
+.active {
+  background:white;
+} 
+.leave_message .btn{
+  background-color: yellow;
+  width: 100rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  margin-left: 15rpx;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}

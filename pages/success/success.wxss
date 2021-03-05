@@ -1,0 +1,6 @@
+/* pages/success/success.wxss */
+
+.my-btn{
+  display: flex;
+  margin-top: 300rpx;
+}

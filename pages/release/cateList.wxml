@@ -1,0 +1,13 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">分类列表</view></cu-custom>
+<van-collapse value="{{ activeNames }}" bind:change="onChange">
+  <van-collapse-item wx:for="{{cateList}}" wx:key="index" title="{{item.name}}" name="{{cateIndex + index}}" bindtap="onGetSecondListClick" data-data="{{index}}">
+    <van-collapse-item wx:for="{{secondCateList}}" wx:key="index" title="{{item.name}}" name="{{secondIndex+index}}" bindtap="onGetThirdListClick" data-data="{{index}}">
+      <view class="flex bg-white text-black margin border-line" style="height:100rpx;" wx:for="{{thirdCateList}}" wx:key="index" bindtap="onSelectCateClick" data-item="{{item}}">
+      {{item.name}}
+      </view>
+      
+    </van-collapse-item>
+  </van-collapse-item>
+
+</van-collapse>
+<van-empty wx:if="{{modalView===false}}" image="network" description="网络错误" />

@@ -1,1 +1,26 @@
-/* pages/cart/cart.wxss */
+.text-box{
+  display: inline-block;
+  text-align: center;
+  width: 80rpx;
+  background-color: gainsboro;
+  font-size: 40rpx;
+}
+.van-checkbox__icon-wrap{
+  margin-left: 40rpx;
+}
+.van-checkbox{
+  background-color: #fff;
+}
+.van-checkbox__label{
+  width: 100%;
+}
+.bar-submit{
+  margin-bottom: 100rpx;
+}
+.font-size{
+  font-size: 36rpx !important;
+  height: 100% !important;
+}
+.card-color{
+  background-color: white !important;
+}

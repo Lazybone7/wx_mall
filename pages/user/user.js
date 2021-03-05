@@ -5,14 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    image_URL:"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
+    userInfo:{}
   },
-
+  onSettingClick(){
+    wx.navigateTo({
+      url: '/pages/user/settings',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.tabBar();
+    this.getUserInfo();
   },
   tabBar(){
     if(typeof this.getTabBar === 'function' && this.getTabBar()){
@@ -20,6 +26,12 @@ Page({
         selected:3
       })
     }
+  },
+  getUserInfo(){
+      let userInfo = wx.getStorageSync("userInfo")
+      this.setData({
+        userInfo
+      })
   },
   onShow: function() {
    

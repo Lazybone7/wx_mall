@@ -2,3 +2,10 @@
 @import "colorui/icon.wxss";
 @import "/styles/my.wxss";
 @import '/miniprogram_npm/@vant/weapp/common/index.wxss';
+.foot{
+  position: absolute;
+  bottom: 0;
+}
+.column{
+  flex-direction: column;
+}

@@ -1,2 +1,72 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="bg-white flex align-end" style="height:150rpx"></view>
+<view class="padding-sm bg-white cuIcon-settings flex justify-end align-center" bindtap="onSettingsClick"></view>
+<view class="bg-white padding-sm grid col-4">
+  <veiw class="cu-avatar xl round" style="background-image:url({{userInfo.img}});"></veiw> 
+  <veiw class="padding-top-sm margin-left-sm">
+    <veiw class="text-black text-bold text-xl margin-bottom-sm">{{userInfo.nickName}}</veiw>
+    <view class="user-sign">个性签名：测试测试测试</view>
+  </veiw>
+  <view class="cuIcon-right flex align-center justify-end" ></view>
+</view>
+<view class="bg-white grid col-4 margin-bottom-sm padding-sm">
+    <veiw class="user-item flex ">
+      <view class="num">{{userInfo.countRelease}}</view>
+      <view class="tag">我发布的</view>
+    </veiw>
+    <veiw class="user-item">
+      <view class="num">0</view>
+      <view class="tag">我卖出的</view>
+    </veiw>
+    <veiw class="user-item">
+      <view class="num">0</view>
+      <view class="tag">我买到的</view>
+    </veiw>
+    <veiw class="user-item">
+      <view class="num">0</view>
+      <view class="tag">我收藏的</view>
+    </veiw>
+  </view> 
+
+
+
+
+
+  
+
+
+<view class="cu-list grid col-4 no-border">
+  <view class="cu-item">
+    <view class="cuIcon-cardboardfill text-red"></view>
+    <text>VR</text>
+  </view>
+</view>
+
+<button class="cu-button bg-red margin lg" role="button">退出登陆</button>
+
+
+
+
+<view class="cu-list menu radius">
+  <view class="cu-item arrow">
+    <veiw class="content">个人资料设置</veiw>
+  </view>
+  <view class="cu-item arrow">
+    <veiw class="content">收货地址</veiw>
+  </view>
+  <view class="cu-item arrow">
+    <veiw class="content">我的关注</veiw>
+  </view>
+  <view class="cu-item arrow">
+    <veiw class="content">我的贴子</veiw>
+  </view>
+  <view class="cu-item arrow">
+    <veiw class="content">历史浏览</veiw>
+  </view>
+  <view class="cu-item arrow">
+    <veiw class="content">关于校园交易网</veiw>
+  </view>
+  <view class="cu-item arrow">
+    <veiw class="content">日志</veiw>
+  </view>
+ 
+</view>

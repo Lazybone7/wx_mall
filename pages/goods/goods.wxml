@@ -1,0 +1,111 @@
+<cu-custom bgColor="bg-white" isBack="{{true}}"><view slot="backText"></view></cu-custom>
+<scroll-view scroll-y class="flex bg-white radius-bottom margin-bottom">
+  <view class="flex align-center margin">
+  <veiw class="cu-avatar xl lg" style="background-image:url({{goodsObj.img}});"></veiw>
+  <view class="flex user-info margin-left">
+    <veiw class="user-name margin-bottom-sm">{{goodsObj.nickName}}</veiw>
+    <view class="user-tag ">发布于浙江</view>
+  </view>  
+  
+  </view>
+
+<van-divider />
+
+<view class="margin"><text class="text-price text-red text-xxl">{{goodsObj.price}}</text></view>
+
+<view class="product-detail">
+  <view class="product-describe text-black text-xxl flex margin"><span>{{goodsObj.name}}{{goodsObj.descript}}</span></view>
+  <veiw class="product-img flex justify-center ">
+    <image wx:for="{{goodsObj.upLoadImgs}}" mode="widthFix" wx:key="id" src="{{item}}"></image>
+  </veiw>
+</view>
+<van-divider />
+<view class="row flex justify-end margin-right">
+  <view class="margin-tb-sm text-center">
+    26人想要·浏览352
+  <button class="cu-btn round line-black margin-left">举报</button>
+</view>
+</view>
+</scroll-view>
+
+<view class="leave-message bg-white padding-left padding-bottom">
+<view class="flex text-xl">全部留言·{{commentListLength}}</view>
+<veiw class="send-message flex row align-center">
+  <veiw class="cu-avatar round sm" style="background-image:url({{userInfo.img}});"></veiw>
+  <input
+		 class="user_input"
+		 placeholder="看对眼就留言,问问更多细节~"
+		 type="text"
+		 bindinput="getComment"
+		 value="{{value}}"
+		/>
+    <veiw class="margin-tb-sm text-center">
+      <button class="cu-btn round bg-red" role="button" bindtap="sendCommentClick">发送</button>
+    </veiw> 
+</veiw>
+<van-divider />
+<view class="prouduct-comment flex column margin-bottom-xl">
+  <view  wx:for="{{commentList}}" class="commentator">
+    <view class="user flex row">
+      <veiw class="cu-avatar sm round " style="background-image:url({{item.img}});"></veiw>
+      <view class="user-tag margin-left-sm text-black text-bold ">{{item.nickName}}</view>
+    </view>
+		<view class="comment text-xl text-black margin-left-xl">{{item.content}}</view>
+		<veiw class="right">发布时间：{{item.timeRelease}}</veiw>
+    <van-divider />
+  </view>
+</view>
+
+</view>
+<view class="bar_tool">
+	<view class="btn_operation">
+		<view
+		 class="way"
+		 hover-class="active"
+		 bindtap="handleLikeTap"
+		>
+			<image
+			 wx:if="{{like==0}}"
+			 mode="aspectFit"
+			 src="../../icons/good.png"
+			/>
+			<image
+			 wx:else
+			 mode="aspectFit"
+			 src="../../icons/like.png"
+			/>
+			<span>超赞</span>
+		</view>
+		<view
+		 class="way"
+		 hover-class="active"
+		 bindtap="handleMessageTap"
+		>
+			<image mode="aspectFit" src="../../icons/mess_board.png" />
+			<span>留言</span>
+		</view>
+		<view
+		 class="way"
+		 hover-class="active"
+		 bindtap="handleCollectTap"
+		>
+			<image
+			 wx:if="{{collect==0}}"
+			 mode="aspectFit"
+			 src="../../icons/collection.png"
+			/>
+			<image
+			 wx:else
+			 mode="aspectFit"
+			 src="../../icons/collected.png"
+			/>
+			<span>收藏</span>
+		</view>
+	</view>
+	<view class="btn_purchase">
+		<button bindtap="onIWantClick">
+			我想要
+		</button>
+	</view>
+
+</view>

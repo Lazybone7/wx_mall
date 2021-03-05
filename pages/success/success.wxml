@@ -1,0 +1,3 @@
+<van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" round size="large" custom-class="my-btn">
+去逛逛
+</van-button>

@@ -1,4 +1,5 @@
 // pages/category/category.js
+var util = require('../../utils/data.js');
 Page({
 
   /**
@@ -7,6 +8,8 @@ Page({
   data: {
     activeKey: 0,
     item:0,
+    cateList:[],
+    secondCateList:[]
   },
   onShow: function() {
     
@@ -30,10 +33,36 @@ Page({
    */
   onLoad: function (options) {
     this.tabBar();
+    this.getProductCategory();
+    
   },
-
-
-  
+  //点击分类图标事件
+  onClickCateItem(e){
+    console.log(e);
+      let cateId = e.currentTarget.dataset.id;
+      wx.navigateTo({
+        url: '/pages/goodsList/goodsList?cateId=' + cateId,
+      })
+  },
+  // 获取分类信息
+  getProductCategory(){
+      util.getProduct('/category/list/tree').then(resp=>{
+          let cateList = resp.data.data;
+          this.setData({
+            cateList
+          })
+      });
+  },
+  //-------------------------
+  //分类列表点击事件
+  onClickCateChange(e){
+    let index = e.currentTarget.dataset.index;
+    let secondCateList = index.children;
+    console.log(secondCateList);
+    this.setData({
+      secondCateList
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

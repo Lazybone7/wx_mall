@@ -1,1 +1,12 @@
-/* pages/search/search.wxss */
+page{
+  background-color: white !important;
+}
+.Search-height{
+  height: 150rpx;
+}
+.Search-radius{
+  
+}
+.font-size{
+  font-size: 30rpx !important;
+}

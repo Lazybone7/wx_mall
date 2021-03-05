@@ -13,7 +13,7 @@ export const request=(params)=>{
                 reslove(result);
             },
             fail:(err)=>{
-                reject(err);
+                reslove("error");
             },
             complete:()=>{
                 ajaxTimes--

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-notify": "@vant/weapp/notify/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  }
+}

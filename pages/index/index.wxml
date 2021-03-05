@@ -51,13 +51,13 @@
     <view class="mall-cate bg-white margin-sm radius">
         <scroll-view class="scroll-cate" scroll-x="true" enable-flex="true">
           <veiw class="cate-item flex">
-            <view class="cu-avatar xl round margin" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);">
+            <view class="cu-avatar xl round margin" style="background-image:url(../../../../icons/tie.png);">
               
             </view>
-            二手手机
+            校园贴
           </veiw>
           <veiw class="cate-item flex">
-            <view class="cu-avatar xl round margin" style="background-image:url(https://img1.360buyimg.com/n6/jfs/t1/157319/26/3073/116449/5ffd2d15Ebd3809cb/16bbd8b83bd11b9e.jpg);">
+            <view class="cu-avatar xl round margin" style="background-image:url();">
               
             </view>
             二手手机
@@ -103,6 +103,18 @@
         </scroll-view>
     </view>
 
+
+
+
+
+
+
+
+
+
+
+
+
     <veiw class="margin-sm flex radius bg-red light ">
         <veiw class="cu-list menu mall-spiker">
           <view class="cu-item arrow">
@@ -126,144 +138,34 @@
       </veiw>
     </veiw>
 
+
+
+
+
+
+
+
+
+
+
     <view class="margin-sm radius">
       <van-tabs active="{{ active }}" custom-class="radius" tab-class="cate-tag">
         <van-tab title="热门">
           <scroll-view class="product-class" scroll-y="true" enable-flex="true">
-              <veiw class="product-display radius">
-                  <image src="https://img.alicdn.com/tfs/TB1fQ1VeMoQMeJjy0FpXXcTxpXa-235-301.png" mode="widthFix"></image>
+              <veiw class="product-display radius" wx:for="{{productList}}" wx:key="brandId" bindtap="onClickPro" data-id="{{item.brandId}}">
+                  <image src="{{item.logo}}" mode="widthFix"></image>
                   <view class="product-detail">
                     <view class="product-induce text-xl margin-sm text-bold van-multi-ellipsis--l2">
-                      测试测试测试测试测试测试，测试测试测试测试，测试测试
+                      {{item.name}}
                     </view>
                     <view class="text-xxl padding-lr-sm flex justify-between  align-end">
-                      <text class="text-price text-red">80</text>
+                      <text class="text-price text-red">{{item.price}}</text>
                       <veiw class="text-sm text-gray  ">共有7人想要</veiw>
                     </view>
-
                   </view>
                   <veiw class="user-detail margin-sm flex">
-                      <view class="cu-avatar round" style="background-image:url(../../icons/my.png);"></view>
-                      <view class="van-ellipsis" style="width:130rpx;">12323213211111111111111111111111111</view>
-                  </veiw>
-              </veiw>
-              <veiw class="product-display radius">
-                  <image src="https://gw.alicdn.com/bao/uploaded/i4/2099164071/O1CN01SouZwn1fwYs2AtF3a_!!0-item_pic.jpg" mode="widthFix"></image>
-                  <view class="product-detail">
-                    <view class="product-induce text-xl margin-sm text-bold van-multi-ellipsis--l2">
-                      测试测试测试测试测试测试，测试测试测试测试，测试测试
-                    </view>
-                    <view class="text-xxl padding-lr-sm flex justify-between  align-end">
-                      <text class="text-price text-red">80</text>
-                      <veiw class="text-sm text-gray  ">共有7人想要</veiw>
-                    </view>
-
-                  </view>
-                  <veiw class="user-detail margin-sm flex">
-                      <view class="cu-avatar round" style="background-image:url(../../icons/my.png);"></view>
-                      <view class="van-ellipsis" style="width:130rpx;">12323213211111111111111111111111111</view>
-                  </veiw>
-              </veiw>
-              <veiw class="product-display radius">
-                  <image src="https://gw.alicdn.com/bao/uploaded/i4/2099164071/O1CN01SouZwn1fwYs2AtF3a_!!0-item_pic.jpg" mode="widthFix"></image>
-                  <view class="product-detail">
-                    <view class="product-induce text-xl margin-sm text-bold van-multi-ellipsis--l2">
-                      测试测试测试测试测试测试，测试测试测试测试，测试测试
-                    </view>
-                    <view class="text-xxl padding-lr-sm flex justify-between  align-end">
-                      <text class="text-price text-red">80</text>
-                      <veiw class="text-sm text-gray  ">共有7人想要</veiw>
-                    </view>
-
-                  </view>
-                  <veiw class="user-detail margin-sm flex">
-                      <view class="cu-avatar round" style="background-image:url(../../icons/my.png);"></view>
-                      <view class="van-ellipsis" style="width:130rpx;">12323213211111111111111111111111111</view>
-                  </veiw>
-              </veiw>
-              <veiw class="product-display radius">
-                  <image src="https://img.alicdn.com/tfs/TB1fQ1VeMoQMeJjy0FpXXcTxpXa-235-301.png" mode="widthFix"></image>
-                  <view class="product-detail">
-                    <view class="product-induce text-xl margin-sm text-bold van-multi-ellipsis--l2">
-                      测试测试测试测试测试测试，测试测试测试测试，测试测试
-                    </view>
-                    <view class="text-xxl padding-lr-sm flex justify-between  align-end">
-                      <text class="text-price text-red">80</text>
-                      <veiw class="text-sm text-gray  ">共有7人想要</veiw>
-                    </view>
-
-                  </view>
-                  <veiw class="user-detail margin-sm flex">
-                      <view class="cu-avatar round" style="background-image:url(../../icons/my.png);"></view>
-                      <view class="van-ellipsis" style="width:130rpx;">12323213211111111111111111111111111</view>
-                  </veiw>
-              </veiw>
-              <veiw class="product-display radius">
-                  <image src="https://img.alicdn.com/tfs/TB1fQ1VeMoQMeJjy0FpXXcTxpXa-235-301.png" mode="widthFix"></image>
-                  <view class="product-detail">
-                    <view class="product-induce text-xl margin-sm text-bold van-multi-ellipsis--l2">
-                      测试测试测试测试测试测试，测试测试测试测试，测试测试
-                    </view>
-                    <view class="text-xxl padding-lr-sm flex justify-between  align-end">
-                      <text class="text-price text-red">80</text>
-                      <veiw class="text-sm text-gray  ">共有7人想要</veiw>
-                    </view>
-
-                  </view>
-                  <veiw class="user-detail margin-sm flex">
-                      <view class="cu-avatar round" style="background-image:url(../../icons/my.png);"></view>
-                      <view class="van-ellipsis" style="width:130rpx;">12323213211111111111111111111111111</view>
-                  </veiw>
-              </veiw>
-              <veiw class="product-display radius">
-                  <image src="https://img.alicdn.com/tfs/TB1fQ1VeMoQMeJjy0FpXXcTxpXa-235-301.png" mode="widthFix"></image>
-                  <view class="product-detail">
-                    <view class="product-induce text-xl margin-sm text-bold van-multi-ellipsis--l2">
-                      测试测试测试测试测试测试，测试测试测试测试，测试测试
-                    </view>
-                    <view class="text-xxl padding-lr-sm flex justify-between  align-end">
-                      <text class="text-price text-red">80</text>
-                      <veiw class="text-sm text-gray  ">共有7人想要</veiw>
-                    </view>
-
-                  </view>
-                  <veiw class="user-detail margin-sm flex">
-                      <view class="cu-avatar round" style="background-image:url(../../icons/my.png);"></view>
-                      <view class="van-ellipsis" style="width:130rpx;">12323213211111111111111111111111111</view>
-                  </veiw>
-              </veiw>
-              <veiw class="product-display radius">
-                  <image src="https://img.alicdn.com/tfs/TB1fQ1VeMoQMeJjy0FpXXcTxpXa-235-301.png" mode="widthFix"></image>
-                  <view class="product-detail">
-                    <view class="product-induce text-xl margin-sm text-bold van-multi-ellipsis--l2">
-                      测试测试测试测试测试测试，测试测试测试测试，测试测试
-                    </view>
-                    <view class="text-xxl padding-lr-sm flex justify-between  align-end">
-                      <text class="text-price text-red">80</text>
-                      <veiw class="text-sm text-gray  ">共有7人想要</veiw>
-                    </view>
-
-                  </view>
-                  <veiw class="user-detail margin-sm flex">
-                      <view class="cu-avatar round" style="background-image:url(../../icons/my.png);"></view>
-                      <view class="van-ellipsis" style="width:130rpx;">12323213211111111111111111111111111</view>
-                  </veiw>
-              </veiw>
-              <veiw class="product-display radius">
-                  <image src="https://img.alicdn.com/tfs/TB1fQ1VeMoQMeJjy0FpXXcTxpXa-235-301.png" mode="widthFix"></image>
-                  <view class="product-detail">
-                    <view class="product-induce text-xl margin-sm text-bold van-multi-ellipsis--l2">
-                      测试测试测试测试测试测试，测试测试测试测试，测试测试
-                    </view>
-                    <view class="text-xxl padding-lr-sm flex justify-between  align-end">
-                      <text class="text-price text-red">80</text>
-                      <veiw class="text-sm text-gray  ">共有7人想要</veiw>
-                    </view>
-
-                  </view>
-                  <veiw class="user-detail margin-sm flex">
-                      <view class="cu-avatar round" style="background-image:url(../../icons/my.png);"></view>
-                      <view class="van-ellipsis" style="width:130rpx;">12323213211111111111111111111111111</view>
+                      <view class="cu-avatar round margin-right-sm" style="background-image:url({{item.img}});"></view>
+                      <view class="van-ellipsis" style="width:130rpx;">{{item.nickName}}</view>
                   </veiw>
               </veiw>
           </scroll-view>
@@ -297,7 +199,7 @@
         <van-tab title="标签 5">内容 5</van-tab>
         <van-tab title="标签 6">内容 6</van-tab>
         <van-tab title="标签 6">内容 6</van-tab>
-        <van-tab title="标签 6">内容 6</van-tab>
+           <van-tab title="标签 6">内容 6</van-tab>
       </van-tabs>
     </view>
 </scroll-view>

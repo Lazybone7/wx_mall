@@ -6,7 +6,7 @@
   "setting": {
     "urlCheck": false,
     "es6": true,
-    "enhance": false,
+    "enhance": true,
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
@@ -75,6 +75,96 @@
         {
           "name": "分类页面",
           "pathName": "pages/category/category",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购物车",
+          "pathName": "pages/cart/cart",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的",
+          "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品详情页",
+          "pathName": "pages/goods/goods",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索页",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品列表",
+          "pathName": "pages/goodsList/goodsList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "登录页",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品",
+          "pathName": "pages/goods/goods",
+          "query": "brandId=2",
+          "scene": null
+        },
+        {
+          "name": "聊天页面",
+          "pathName": "pages/chat/chat",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "支付页面",
+          "pathName": "pages/pay/pay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "收货地址管理",
+          "pathName": "pages/address/manage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "新增收货地址",
+          "pathName": "pages/address/add",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布页",
+          "pathName": "pages/release/release",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布分类列表",
+          "pathName": "pages/release/cateList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "测试页面",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "设置页面",
+          "pathName": "pages/user/settings",
           "scene": null
         }
       ]

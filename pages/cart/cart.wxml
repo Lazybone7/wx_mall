@@ -1,2 +1,118 @@
-<!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<cu-custom bgColor="bg-red" ><view slot="content">购物车</view></cu-custom>
+<scroll-view scroll-y style="height: 950rpx">
+  <van-checkbox-group value="{{result}}" bind:change="onChange">
+    <van-checkbox name="a">
+      <van-card
+        tag="标签"
+        price="10.00"
+        custom-class="card-color"
+        desc="描述信息"
+        title="商品标题"
+        thumb="https://gw.alicdn.com/bao/uploaded/i4/3419050153/O1CN01sNGZ5t1D07Fb2yz7r_!!0-item_pic.jpg"
+        thumb-mode="widthFit"
+      >
+    <view slot="footer">
+      <van-button size="mini" custom-class="font-size">-</van-button>
+      <view class="text-box">1</view>
+      <van-button size="mini" custom-class="font-size">+</van-button>
+    </view>
+    </van-card>
+    </van-checkbox>
+  <van-checkbox name="b">
+    <van-card
+  tag="标签"
+  price="10.00"
+  custom-class="card-color"
+  desc="描述信息"
+  title="商品标题"
+  thumb="https://gw.alicdn.com/bao/uploaded/i4/3419050153/O1CN01sNGZ5t1D07Fb2yz7r_!!0-item_pic.jpg"
+  thumb-mode="widthFit"
+>
+  <view slot="footer">
+    <van-button size="mini" custom-class="font-size">-</van-button>
+    <view class="text-box">1</view>
+    <van-button size="mini" custom-class="font-size">+</van-button>
+  </view>
+  </van-card>
+  </van-checkbox>
+  <van-checkbox name="a">
+    <van-card
+  tag="标签"
+  price="10.00"
+  custom-class="card-color"
+  desc="描述信息"
+  title="商品标题"
+  thumb="https://gw.alicdn.com/bao/uploaded/i4/3419050153/O1CN01sNGZ5t1D07Fb2yz7r_!!0-item_pic.jpg"
+  thumb-mode="widthFit"
+>
+  <view slot="footer">
+    <van-button size="mini" custom-class="font-size">-</van-button>
+    <view class="text-box">1</view>
+    <van-button size="mini" custom-class="font-size">+</van-button>
+  </view>
+  </van-card>
+  </van-checkbox>
+  <van-checkbox name="a">
+    <van-card
+  tag="标签"
+  price="10.00"
+  custom-class="card-color"
+  desc="描述信息"
+  title="商品标题"
+  thumb="https://gw.alicdn.com/bao/uploaded/i4/3419050153/O1CN01sNGZ5t1D07Fb2yz7r_!!0-item_pic.jpg"
+  thumb-mode="widthFit"
+>
+  <view slot="footer">
+    <van-button size="mini" custom-class="font-size">-</van-button>
+    <view class="text-box">1</view>
+    <van-button size="mini" custom-class="font-size">+</van-button>
+  </view>
+  </van-card>
+  </van-checkbox>
+  <van-checkbox name="a">
+    <van-card
+  tag="标签"
+  price="10.00"
+  custom-class="card-color"
+  desc="描述信息"
+  title="商品标题"
+  thumb="https://gw.alicdn.com/bao/uploaded/i4/3419050153/O1CN01sNGZ5t1D07Fb2yz7r_!!0-item_pic.jpg"
+  thumb-mode="widthFit"
+>
+  <view slot="footer">
+    <van-button size="mini" custom-class="font-size">-</van-button>
+    <view class="text-box">1</view>
+    <van-button size="mini" custom-class="font-size">+</van-button>
+  </view>
+  </van-card>
+  </van-checkbox>
+  <van-checkbox name="a">
+    <van-card
+  tag="标签"
+  price="10.00"
+  custom-class="card-color"
+  desc="描述信息"
+  title="商品标题"
+  thumb="https://gw.alicdn.com/bao/uploaded/i4/3419050153/O1CN01sNGZ5t1D07Fb2yz7r_!!0-item_pic.jpg"
+  thumb-mode="widthFit"
+>
+  <view slot="footer">
+    <van-button size="mini" custom-class="font-size">-</van-button>
+    <view class="text-box">1</view>
+    <van-button size="mini" custom-class="font-size">+</van-button>
+  </view>
+  </van-card>
+  </van-checkbox>
+  </van-checkbox-group>
+</scroll-view>
+
+<van-submit-bar
+  price="{{ 3050 }}"
+  button-text="提交订单"
+  bind:submit="onClickButton"
+  tip="{{ true }}"
+  custom-class="bar-submit"
+>
+  <van-tag type="primary"><van-checkbox value="{{ checked }}" bind:change="onAllClick">全选</van-checkbox></van-tag>
+  <view slot="tip">您的收货地址不支持同城送, <text>修改地址</text></view>
+</van-submit-bar>

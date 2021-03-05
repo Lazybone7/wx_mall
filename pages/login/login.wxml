@@ -1,0 +1,61 @@
+<view class="display">
+	<image src="https://cdn.pixabay.com/photo/2015/01/21/17/22/shopping-606993__340.jpg" mode="widthFix" />
+
+</view>
+
+<view class="content">
+	<view class="account">
+		<view class="title">账号</view>
+		<view class="num">
+			<input
+			 bindinput="accountInput"
+			 placeholder="用户名"
+			 placeholder-style="color:#999999"
+			/>
+		</view>
+	</view>
+	<view class="hr"></view>
+	<view class="account">
+		<view class="title">密码</view>
+		<view class="num">
+			<input
+			 bindinput="pwBlur"
+			 placeholder="请输入密码"
+			 password
+			 placeholder-style="color:#999999"
+			/>
+		</view>
+		<view class="see">
+			<image
+			 mode="aspectFit"
+			 src="../../icons/see.png"
+			 style="width:50rpx; height:30rpx"
+			/>
+		</view>
+	</view>
+	<view class="hr"></view>
+	<!-- 登录按钮 -->
+	<button
+	 class="btn"
+	 type="{{btnstate}}"
+	 disabled="{{disabled}}"
+	 bindtap="login"
+	>
+		登录
+	</button>
+	<!-- 注册的导航 -->
+	<view class="operator">
+		<view>
+			<navigator url="/pages/register/index">个人快速注册
+			</navigator>
+		</view>
+		<view>
+			<navigator>企业用户注册</navigator>
+		</view>
+		<view>
+			<navigator>找回密码</navigator>
+		</view>
+	</view>
+</view>
+
+

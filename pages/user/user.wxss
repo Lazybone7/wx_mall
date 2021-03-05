@@ -1,1 +1,29 @@
-/* pages/user/user.wxss */
+.cuIcon-settings{
+  font-size: 50rpx !important;
+}
+.cuIcon-list{
+  font-size: 50rpx !important;
+}
+
+.user-sign{
+  color: gray;
+  font-size: 30rpx;
+}
+
+.user-item{
+    flex:1;
+    text-align: center; 
+    flex-direction: column;
+    padding-top: 33rpx;
+}
+.num{
+  font-size: 60rpx;
+  color:black;
+}
+.tag{
+  color: gray;
+  font-size: 30rpx;
+}
+.content{
+  
+}

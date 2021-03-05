@@ -6,7 +6,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    result: [],
+    checked: false
+  },
+  onAllClick(event){
+    this.setData({
+      checked: event.detail,
+    });
+    if(event.detail === true){
+       
+    }
+  },
+  onChange(event) {
+    console.log(event.detail)
+    this.setData({
+      result: event.detail,
+    });
   },
   tabBar(){
     if(typeof this.getTabBar === 'function' && this.getTabBar()){

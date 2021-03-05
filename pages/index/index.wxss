@@ -8,6 +8,7 @@
 }
 image{
   border-radius: 25rpx;
+  
 }
 .product-class{
   width:100%;

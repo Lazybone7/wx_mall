@@ -1,0 +1,9 @@
+.height{
+  height: 200rpx;
+}
+.chat-height{
+  height: 885rpx;
+}
+.flex-between{
+
+}
